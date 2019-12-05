@@ -1,5 +1,4 @@
 package com.app.cellular.mobile.Agent;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.room.Room;
