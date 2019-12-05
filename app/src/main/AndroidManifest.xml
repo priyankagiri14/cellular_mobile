@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.cellular.mobile">
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.perfmission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.app.cellular.mobile.Web_Services.MyApp"
+        android:allowBackup="false"
+        android:icon="@drawable/cellular_app_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/cellular_app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+        <activity android:name="com.app.cellular.mobile.AgentAllocationTab"></activity>
+        <activity android:name="com.app.cellular.mobile.AnyAgentAllocation.AnyAgentAllocation" />
+        <activity android:name="com.app.cellular.mobile.Driver.SignUpAgent.EditAgentForm" />
+        <activity android:name="com.app.cellular.mobile.Driver.SignUpAgent.CreatedUsersList" />
+        <activity android:name="com.app.cellular.mobile.Driver.SignUpAgent.SignUpAgent4" />
+        <activity android:name="com.app.cellular.mobile.Driver.SignUpAgent.SignUpAgent3" />
+        <activity android:name="com.app.cellular.mobile.Driver.SignUpAgent.SignUpAgent2" />
+        <activity android:name="com.app.cellular.mobile.AboutActivity" />
+        <activity android:name="com.app.cellular.mobile.Driver.SignUpAgent.SignUpAgent" />
+        <activity
+            android:name="com.app.cellular.mobile.SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.app.cellular.mobile.Agent.NetworkError" />
+        <activity android:name="com.app.cellular.mobile.Agent.OfflineRica" />
+        <activity android:name="com.app.cellular.mobile.RicaTab" />
+        <activity android:name="com.app.cellular.mobile.AgentBatchesReceived.AgentNormalBatchesReceivedList" />
+        <activity android:name="com.app.cellular.mobile.AgentReceiveBatchesTab" />
+        <activity android:name="com.app.cellular.mobile.AgentBatchesGet.AgentNormalBatchesList" />
+        <activity
+            android:name="com.app.cellular.mobile.AssignBatchTab"
+            android:label="@string/title_activity_assign_batch_tab"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.app.cellular.mobile.Agent.ScanBatch" />
+        <activity android:name="com.app.cellular.mobile.OpenCloseBatches.CashHistory.CashUpStatement" />
+        <activity android:name="com.app.cellular.mobile.OpenBatchesResponse.OpenedBatchesActivity" />
+        <activity android:name="com.app.cellular.mobile.OpenCloseBatches.OpenCloseActivity" />
+        <activity android:name="com.app.cellular.mobile.FuelMaintenence.VehicleCharge" />
+        <activity android:name="com.app.cellular.mobile.Navigation_main.Contact_Ontrack" />
+        <activity android:name="com.app.cellular.mobile.Navigation_main.Address_Ontrack" />
+        <activity android:name="com.app.cellular.mobile.Navigation_main.Navigation_Main" />
+        <activity android:name="com.app.cellular.mobile.AgentBatchesReceived.AgentBatchesReceived" />
+        <activity android:name="com.app.cellular.mobile.AgentBatchesGet.AgentBatchesGet" />
+        <activity android:name="com.app.cellular.mobile.BatchesReceived.BatchesReceivedList" />
+        <activity android:name="com.app.cellular.mobile.AllocationGet.AllocationGet" />
+        <activity android:name="com.app.cellular.mobile.AgentsList.AgentsList" />
+        <activity android:name="com.app.cellular.mobile.AgentsGetResponse.AgentsGetList" />
+        <activity android:name="com.app.cellular.mobile.DriverBatchesGet.BatchesGetList" />
+        <activity android:name="com.app.cellular.mobile.DriverBatchesGet.NormalBatchesGetList" />
+        <activity android:name="com.app.cellular.mobile.AgentAssignBatchesTab" />
+        <activity android:name="com.app.cellular.mobile.ReceiveBatchesTab" />
+        <activity android:name="com.app.cellular.mobile.BatchesReceived.NormalBatchesReceivedList" />
+        <activity android:name="com.app.cellular.mobile.WifiBundle.WifiBundle" />
+        <activity android:name="com.app.cellular.mobile.AirtimeSales.AirtimeSalesActivity" />
+        <activity android:name="com.app.cellular.mobile.DataBundle.DataBundleActivity" />
+        <activity
+            android:name="com.app.cellular.mobile.AirtimeSales.AirtimeRechargeActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity android:name="com.app.cellular.mobile.ElectricityBundle.ElectricityBundleActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_api_ley" />
+
+        <activity
+            android:name="com.app.cellular.mobile.Agent.Agent_Mainactivity"
+            android:label="@string/app_name" />
+        <activity android:name="com.app.cellular.mobile.Driver.Stock_allocate.Stock_allocate" />
+        <activity android:name="com.app.cellular.mobile.Driver.Driver_Dashboard.Stocks_dashboard" />
+        <activity android:name="com.app.cellular.mobile.Driver.Stock_allocate.Tab_Stock_Activity" />
+        <activity android:name="com.app.cellular.mobile.Driver.Stock_allocate.Pending_Box_List" />
+        <activity android:name="com.app.cellular.mobile.Driver.DriverAttendance.DriverAttendance" />
+        <activity android:name="com.app.cellular.mobile.Agent.Sim_allocation" />
+    </application>
+
+</manifest>
