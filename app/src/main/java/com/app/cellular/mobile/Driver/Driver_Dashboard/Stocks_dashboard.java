@@ -21,8 +21,10 @@ import com.app.cellular.mobile.Agent.NetworkError;
 import com.app.cellular.mobile.Agent.OfflineRica;
 import com.app.cellular.mobile.Agent.Sim_allocation;
 import com.app.cellular.mobile.AssignBatchTab;
+import com.app.cellular.mobile.Driver.DriverSubAgentRegister.SubAgentRegister;
 import com.app.cellular.mobile.Driver.SignUpAgent.CreatedUsersList;
 import com.app.cellular.mobile.Driver.SignUpAgent.SignUpAgent;
+import com.app.cellular.mobile.Driver.UpdateDriverRicaGroupName.UpdateDriverRicaGroup;
 import com.app.cellular.mobile.NetworkStateReceiver;
 import com.app.cellular.mobile.OpenCloseBatches.CashHistory.CashUpStatement;
 import com.app.cellular.mobile.Driver.DriverAttendance.DriverAttendance;
@@ -30,6 +32,7 @@ import com.app.cellular.mobile.Navigation_main.Navigation_Main;
 import com.app.cellular.mobile.R;
 import com.app.cellular.mobile.ReceiveBatchesTab;
 import com.app.cellular.mobile.RicaTab;
+import com.app.cellular.mobile.Web_Services.MyApp;
 import com.app.cellular.mobile.Web_Services.RetrofitToken;
 import com.app.cellular.mobile.Web_Services.Utils.Pref;
 import com.app.cellular.mobile.Web_Services.Web_Interface;
@@ -188,12 +191,27 @@ public class Stocks_dashboard extends AppCompatActivity implements View.OnClickL
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.clear();
                         editor.apply();
+                        Pref.removeIsRica(MyApp.getContext());
                         Intent i = new Intent(Stocks_dashboard.this, Navigation_Main.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(i);
                         finish();
 
                     }
+                }
+
+                if(menuItem.getItemId() == R.id.update_group_rica)
+                {
+                    Log.d("StocksDash", "onOptionsItemSelected:bulk ");
+                    Intent intent = new Intent(Stocks_dashboard.this, UpdateDriverRicaGroup.class);
+                    startActivity(intent);
+                }
+
+                if(menuItem.getItemId() == R.id.addsubagent)
+                {
+                    Log.d("StocksDash", "onOptionsItemSelected:bulk ");
+                    Intent intent = new Intent(Stocks_dashboard.this, SubAgentRegister.class);
+                    startActivity(intent);
                 }
                     if(menuItem.getItemId() == R.id.bulkrica)
                     {
