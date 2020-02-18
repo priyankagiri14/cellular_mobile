@@ -3,6 +3,7 @@ package com.app.cellular.mobile.CredentialsCheck;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+
 public class UserProfile {
 
     @SerializedName("id")
